@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin|IM+Fell+Great+Primer&display=swap);a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #9561e2;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body #content-navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+body .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+body .bio-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#main-header {
+  margin-left: 42px;
+}
+
+#main-header h1 {
+  font-family: "IM Fell Great Primer", serif;
+}
+
+.navbar ul {
+  list-style-type: none;
+  font-family: "Cabin", sans-serif;
+  border-right: 2px solid black;
+  padding-right: 20px;
+}
+
+.navbar ul li {
+  margin: 10px 0;
+}
+
+.bio-wrapper {
+  margin-left: 20px;
+}
+
+.bio-wrapper .bio-image {
+  text-align: center;
+}
+
+.bio-wrapper .bio-image img {
+  border-radius: 50%;
+  height: 200px;
+  width: auto;
+}
+
+.bio-wrapper .bio-text {
+  font-family: "Cabin", sans-serif;
+  margin: 1% 20%;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card img {
+  height: 400px;
+  width: auto;
+}
+
+.card .card-text {
+  font-family: "Cabin", sans-serif;
+  text-decoration: none;
+  text-align: right;
+}
+
+.artwork {
+  max-width: 100vw;
+  height: 100vh;
+  margin-left: 20px;
+}
+
+.artwork img {
+  height: 100%;
+  width: auto;
+}
+
+.artwork .artwork-title {
+  font-family: "Cabin", sans-serif;
+}
+
