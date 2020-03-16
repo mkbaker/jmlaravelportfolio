@@ -4,12 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Juliette Meyers</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="<?php echo asset('css/app.css')?>" type="text/css">
+        @yield('head')
+
     </head>
     <body>
 
@@ -30,6 +32,9 @@
                 @yield('bio')
                 @yield('medium')
                 @yield('artwork')
+
+                {{-- Admin Routes --}}
+                @yield('create')
               </div>
             </div>
         </div>

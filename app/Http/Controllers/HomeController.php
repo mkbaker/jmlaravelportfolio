@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Artwork;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,27 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function create()
+    {
+        return view('admin.create');
+    }
+
+    public function store()
+    {
+        Artwork::create($this->validateArtwork());
+
+        return redirect('/home');
+    }
+
+    protected function validateArtwork()
+    {
+        return request()->validate([
+            'title' => 'required',
+            'url' => 'required',
+            'medium' => 'required',
+            'statement' => 'required'    
+        ]);
     }
 }

@@ -23,3 +23,11 @@ Route::get('artwork/medium/{medium}', 'ArtworkController@medium')->name('artwork
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Admin Routes
+Route::get('/home/create', "HomeController@create")
+    ->name('home.create')
+    ->middleware('auth');
+Route::post('/home/store', "HomeController@store")
+    ->name('home.store')
+    ->middleware('auth');
