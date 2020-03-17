@@ -22,12 +22,15 @@ Route::get('/artwork/{id}', 'ArtworkController@show')->name('artwork.show');
 Route::get('artwork/medium/{medium}', 'ArtworkController@medium')->name('artwork.medium');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index')->name('admin.home');
 
 //Admin Routes
-Route::get('/home/create', "HomeController@create")
-    ->name('home.create')
+Route::get('/admin/create', "AdminController@create")
+    ->name('admin.create')
     ->middleware('auth');
-Route::post('/home/store', "HomeController@store")
-    ->name('home.store')
+Route::post('/admin/store', "AdminController@store")
+    ->name('admin.store')
+    ->middleware('auth');
+Route::delete('/admin/delete/{id}', "AdminController@destroy")
+    ->name('admin.destroy')
     ->middleware('auth');

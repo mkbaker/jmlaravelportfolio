@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Artwork;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -16,12 +16,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    
     public function index()
     {
         return view('home');
@@ -36,7 +31,7 @@ class HomeController extends Controller
     {
         Artwork::create($this->validateArtwork());
 
-        return redirect('/home');
+        return redirect('/admin');
     }
 
     protected function validateArtwork()
@@ -45,7 +40,12 @@ class HomeController extends Controller
             'title' => 'required',
             'url' => 'required',
             'medium' => 'required',
-            'statement' => 'required'    
+            'statement' => 'nullable'    
         ]);
+    }
+
+    public function destroy() 
+    {
+
     }
 }
